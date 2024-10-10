@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Recharge App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Mobile Recharge</div>
+    </header>
+    <div class="container">
+        <h1>Recharge Plans</h1>
+        
+        <label for="operator">Choose your SIM Operator:</label>
+        <select id="operator" class="operator-select">
+            <option value="all">All Operators</option>
+            <option value="Airtel">Airtel</option>
+            <option value="Jio">Jio</option>
+            <option value="Vodafone Idea">Vodafone Idea</option>
+            <option value="BSNL">BSNL</option>
+        </select>
+        
+        <input type="text" id="search" placeholder="Search plans..." class="search-bar">
+        <p>Select a plan that suits you best.</p>
+        <div id="plans" class="plans-container"></div>
+        
+        <h2>Favorites</h2>
+        <div id="favorites" class="plans-container"></div>
+        
+        <div class="loading-spinner" id="loading-spinner" style="display:none;">Loading...</div>
+    </div>
+
+    <div id="modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Recharge Confirmation</h2>
+            <p id="confirmation-message"></p>
+            <input type="text" id="phone-number" placeholder="Enter your phone number" />
+            <button id="confirm-recharge">Confirm Recharge</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact Us: support@mobilerecharge.com | Phone: 123-456-7890</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
